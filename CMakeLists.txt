@@ -16,7 +16,7 @@ set(CMAKE_AUTORCC ON)
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Quick REQUIRED)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES src/main.cpp)
 
 add_executable(qtstarter ${SOURCE_FILES} ${RESOURCE_FILES})
 
