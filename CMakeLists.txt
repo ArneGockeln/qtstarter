@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.7)
 project(qtstarter)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -16,8 +16,11 @@ set(CMAKE_AUTORCC ON)
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Quick REQUIRED)
 
+set(PROJECT_SOURCE_DIR src/)
+include_directories(${PROJECT_SOURCE_DIR})
+
 set(SOURCE_FILES src/main.cpp)
 
-add_executable(qtstarter ${SOURCE_FILES} ${RESOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${RESOURCE_FILES})
 
-target_link_libraries(qtstarter Qt5::Core Qt5::Quick)
+target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Quick)

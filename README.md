@@ -9,6 +9,6 @@ Tested with the following environment:
 
 - macOS Sierra 10.12.6 
 - CLion 2017.2.3 
+- Sublime Text 3
 - Qt 5.9.2 clang_64
 - CMake 3.10.0-rc1
-
