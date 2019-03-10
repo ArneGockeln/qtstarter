@@ -37,13 +37,13 @@ $ ~/sourcecode/sdk/QtLatest/5.12.0/clang_64/bin/macdeployqt
 
 3. In `CMakeLists.txt` on line 26 and following set the variables to your needs.
 
-4. Again run `./build.sh release` in your app root directory but with parameter `release`:
+4. Again run `./build.sh` in your app root directory but with parameter `release`:
 
 ```
 $ ./build.sh release
 ```
 
-Now there is a bundle `AppName.app` in the build folder ready to ship.
+When finished there is a bundle `AppName.app` in the build folder ready to ship.
 
 ## Test
 Tested with the following environment:
