@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(qtstarter)
+project(widgetsapp)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -18,10 +18,7 @@ set(RESOURCE_FILES
 	res/${ICON_NAME}.png
 )
 find_package(Qt5Core REQUIRED)
-# QtQuick Application
-find_package(Qt5Quick REQUIRED)
-# QtWidget Application
-# find_package(Qt5Widgets REQUIRED)
+find_package(Qt5Widgets REQUIRED)
 
 # macOS Bundle building
 set(OS_BUNDLE "")
@@ -58,7 +55,4 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 )
 endif()
 
-# QtQuick Application
-target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Quick)
-# QtWidget Application
-# target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
+target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
