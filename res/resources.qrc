@@ -2,5 +2,6 @@
 <RCC version="1.0">
     <qresource prefix="/">
         <file>views/main.qml</file>
+        <file alias="AppIcon">AppIcon.png</file>
     </qresource>
 </RCC>
