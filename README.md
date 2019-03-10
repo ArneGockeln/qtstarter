@@ -48,8 +48,7 @@ Now there is a bundle `AppName.app` in the build folder ready to ship.
 ## Test
 Tested with the following environment:
 
-- macOS Sierra 10.12.6 
-- CLion 2017.2.3 
+- macOS Mojave 10.14.3 
 - Sublime Text 3
 - Qt 5.12 clang_64
-- CMake 3.8
+- CMake 3.13.3
