@@ -7,13 +7,20 @@ C++/Qt5 starter project with cmake build system, QtQuick, QtWidgets, AppIcon, ma
 2. Add the bin path of your Qt installation to your `~/.bash_profile`:
 
 ```
-# like this:
+# there should be an entry like this:
 export PATH="$PATH:~/sourcecode/sdk/QtLatest/5.12.0/clang_64/bin"
 ```
 
-3. If you want to make a QtQuick app use the `quick_app` folder. For a QtWidgets app use the `widgets_app` folder.
+3. Add the bin path of your CMake installation to your `~/.bash_profile`:
 
-4. Edit the `CMakeLists.txt` file and set the `CMAKE_PREFIX_PATH` variable to your Qt bin path as described in 2.
+```
+# there should be an entry like this:
+export PATH="$PATH:/Applications/CMake.app/Contents/bin"
+```
+
+4. If you want to make a QtQuick app use the `quick_app` folder. For a QtWidgets app use the `widgets_app` folder.
+
+5. Edit the `CMakeLists.txt` file and set the `CMAKE_PREFIX_PATH` variable to your Qt bin path as described in 2.
 
 ## Build a debug version
 Just run `./build.sh` in your app root directory. It will create a `build` directory and compile the app. On every run the script removes the build directory entirely. To prevent this, go to the build directory and run `make`.
