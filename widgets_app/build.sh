@@ -35,11 +35,11 @@ if [ $# -gt 0 ]; then
 	if [ -z "$QMLDIR" ]; then
 		# no qml views directory found, macdeployqt for QtWidgets application
 		echo "Deploy Widget application"
-		macdeployqt $BUNDLENAME	
+		macdeployqt $BUNDLENAME	-verbose=2 -dmg
 	else 
 		# qml directory found, macdeployqt for QtQuick application
 		echo "Deploy Quick application"
-		macdeployqt $BUNDLENAME -qmldir=$QMLDIR
+		macdeployqt $BUNDLENAME -verbose=2 -dmg -qmldir=$QMLDIR
 	fi
 fi
 
