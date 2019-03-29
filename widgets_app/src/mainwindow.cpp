@@ -6,7 +6,7 @@
 #include <QMessageBox>
 
 MainWindow::MainWindow() {
-	setWindowTitle(tr("Awesome App"));
+	setWindowTitle( QCoreApplication::applicationName() );
 
 	auto screenRect = QApplication::desktop()->screenGeometry();
 
