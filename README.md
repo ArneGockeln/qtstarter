@@ -35,7 +35,7 @@ $ ~/sourcecode/sdk/QtLatest/5.12.0/clang_64/bin/macdeployqt
 
 2. In the folder `res/` there is a file `AppIcon.icns` and `AppIcon.png`. Replace these files with your AppIcon. 
 
-3. In `CMakeLists.txt` on line 26 and following set the variables to your needs.
+3. In `CMakeLists.txt` on line 4-9 set the variables to your needs.
 
 4. Again run `./build.sh` in your app root directory but with parameter `release`:
 
@@ -43,7 +43,34 @@ $ ~/sourcecode/sdk/QtLatest/5.12.0/clang_64/bin/macdeployqt
 $ ./build.sh release
 ```
 
-When finished there is a bundle `AppName.app` in the build folder ready to ship.
+When finished there is a bundle `AppName.app` and a `AppName.dmg` in the build folder ready to ship.
+
+## CLI / GUI Mode
+You can run the app in cli or gui mode by using command line parameters:
+
+```
+$ ./quickapp -h
+Usage: ./quickapp [options]
+AppName
+
+Options:
+  -h, --help     Displays this help.
+  -v, --version  Displays version information.
+  -c, --cli      Run in cli mode only.
+```
+
+Or in the release bundle:
+
+```
+$ ./AppName.app/Contents/MacOS/AppName -h
+Usage: ./AppName.app/Contents/MacOS/AppName [options]
+AppName
+
+Options:
+  -h, --help     Displays this help.
+  -v, --version  Displays version information.
+  -c, --cli      Run in cli mode only.
+```
 
 ## Test
 Tested with the following environment:

@@ -25,7 +25,7 @@ MainWindow::MainWindow() {
 	// set about dialog
 	QAction* action_about = new QAction(tr("&About"), this);
 	connect(action_about, &QAction::triggered, this, [this](){
-		QMessageBox::about(this, tr("About"), tr("This app is written by Arne Gockeln.\nMore about me https://arnegockeln.com."));
+		QMessageBox::about(this, tr("About"), QCoreApplication::applicationName() + "\n" + QCoreApplication::applicationVersion());
 	});
 
 	QMenu* file = menuBar()->addMenu(tr("&File"));
