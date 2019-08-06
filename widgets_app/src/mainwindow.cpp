@@ -1,14 +1,14 @@
 #include "mainwindow.h"
 
 #include <QApplication>
-#include <QDesktopWidget>
+#include <QScreen>
 #include <QMenuBar>
 #include <QMessageBox>
 
 MainWindow::MainWindow() {
 	setWindowTitle( QCoreApplication::applicationName() );
 
-	auto screenRect = QApplication::desktop()->screenGeometry();
+	auto screenRect = QGuiApplication::primaryScreen()->availableGeometry();
 
 	int wnd_width   = 640;
 	int wnd_height  = 480;
