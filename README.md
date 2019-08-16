@@ -4,11 +4,11 @@ C++/Qt5 starter project with cmake build system, QtQuick, QtWidgets, AppIcon, ma
 ## Usage
 1. Clone the repository.
 
-2. Add the bin path of your Qt installation to your `~/.bash_profile`:
+2. Add the path of your Qt installation to your `~/.bash_profile`:
 
 ```
 # there should be an entry like this:
-export PATH="$PATH:~/sourcecode/sdk/QtLatest/5.12.0/clang_64/bin"
+export PATH="$PATH:~/sourcecode/sdk/QtLatest/5.12.0/clang_64/"
 ```
 
 3. Add the bin path of your CMake installation to your `~/.bash_profile`:
@@ -30,7 +30,7 @@ Just run `./build.sh` in your app root directory. It will create a `build` direc
 
 ```
 $ which macdeployqt
-$ ~/sourcecode/sdk/QtLatest/5.12.0/clang_64/bin/macdeployqt
+$ ~/sourcecode/sdk/QtLatest/5.13.0/clang_64/bin/macdeployqt
 ```
 
 2. In the folder `res/` there is a file `AppIcon.icns` and `AppIcon.png`. Replace these files with your AppIcon. 
@@ -76,6 +76,6 @@ Options:
 Tested with the following environment:
 
 - macOS Mojave 10.14.3 
-- Sublime Text 3
-- Qt 5.12 clang_64
+- CLion 2019.2
+- Qt 5.13 clang_64
 - CMake 3.13.3

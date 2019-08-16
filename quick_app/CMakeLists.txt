@@ -15,7 +15,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 # Qt
 # Set this to your Qt installation
 set(ICON_NAME AppIcon)
-set(CMAKE_PREFIX_PATH ~/sourcecode/sdk/QtLatest/5.9.2/clang_64)
 set(CMAKE_AUTOMOC ON) # For meta object compiler 
 set(CMAKE_AUTOUIC ON) # Resource files
 set(CMAKE_AUTORCC ON) # UI Files
