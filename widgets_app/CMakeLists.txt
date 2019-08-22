@@ -51,10 +51,23 @@ file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/*.cpp)
 # executable
 add_executable(${PROJECT_NAME} ${OS_BUNDLE} ${SOURCE_FILES} ${RESOURCE_FILES})
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
+# set target properties
 set_target_properties(${PROJECT_NAME} PROPERTIES 
 	MACOSX_BUNDLE TRUE 
 	RESOURCE "${RESOURCE_FILES}"
 	OUTPUT_NAME "${PROJECT_BUNDLE_NAME}"
+)
+# bundle everything with macdeployqt to .dmg
+# Retrieve the absolute path to qmake and then use that path to find
+# the binaries
+get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
+get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
+find_program(MACDEPLOYQT_EXECUTABLE macdeployqt HINTS "${_qt_bin_dir}")
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+	COMMAND "${MACDEPLOYQT_EXECUTABLE}"
+	"$<TARGET_FILE_DIR:${PROJECT_NAME}>/../.."
+	-always-overwrite -dmg
+	COMMENT "Running macdeployqt..."
 )
 endif()
 
